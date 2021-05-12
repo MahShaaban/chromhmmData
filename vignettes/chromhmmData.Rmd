@@ -1,0 +1,45 @@
+---
+title: "Description of chromhmmData"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{chromhmmData}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(chromhmmData)
+```
+
+This package include the genomic annotations required for running `ChromHMM`.
+
+This includes:
+
+1. `CHROMSIZES`: text files with the chromosomes' sizes
+2. `COORDS`: bed files with the coordinates of different genomic features
+3. `ANCHORFILES`: text files with transcription start and end sites of known 
+genes
+
+The annotations for four different genomes are included in the package. Those
+are the human `hg18` and `hg19` and the mouse `mm10` and `mm9`.
+
+Use `system.file` to access the files and directorys. For example
+
+```{r example}
+# access a directory
+chromsizes <- system.file('extdata/CHROMSIZES', package = 'chromhmmData')
+dir(chromsizes)
+
+# access a file
+system.file('extdata/CHROMSIZES', 'hg19.txt', package = 'chromhmmData')
+```
+
+These annotation files are obtained from 
+[`ChromHMM`](https://github.com/jernst98/ChromHMM) source code repository.

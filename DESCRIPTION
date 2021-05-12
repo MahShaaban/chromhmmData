@@ -5,7 +5,7 @@ Description: Annotation files of the formatted genomic annotation for ChromHMM.
   Three types of text files are included the chromosome sizes, region 
   coordinates and anchors specifying the transcription start and end sites. The
   package includes data for two versions of the genome of humans and mice.
-Version: 0.99.0
+Version: 0.99.1
 Authors@R: person("Mahmoud", "Ahmed",
                   email = "mahmoud.s.fahmy@students.kasralainy.edu.eg",
                   role = c("aut", "cre"),
@@ -17,3 +17,7 @@ Depends: R (>= 4.0)
 biocViews: AnnotationData,
   Homo_sapiens,
   Mus_musculus
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
