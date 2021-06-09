@@ -14,6 +14,14 @@ knitr::opts_chunk$set(
 )
 ```
 
+To install `chromhmmData` use
+
+```{r installation,eval=FALSE}
+if(!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("chromhmmData")
+```
+
 ```{r setup}
 library(chromhmmData)
 ```
@@ -43,3 +51,9 @@ system.file('extdata/CHROMSIZES', 'hg19.txt', package = 'chromhmmData')
 
 These annotation files are obtained from 
 [`ChromHMM`](https://github.com/jernst98/ChromHMM) source code repository.
+
+
+```{r sessioninfo}
+sessionInfo()
+```
+
